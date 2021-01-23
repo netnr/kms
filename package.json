@@ -1,0 +1,17 @@
+{
+  "name": "sdocs",
+  "version": "0.0.1",
+  "description": "serverless docs",
+  "main": "index.js",
+  "keywords": [
+    "netnr",
+    "sdocs",
+    "serverless docs"
+  ],
+  "author": "netnr",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^1.2.7",
+    "mime": "^2.5.0"
+  }
+}
