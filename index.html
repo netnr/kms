@@ -87,14 +87,14 @@
             };
         }
 
-        get('https://cdn.jsdelivr.net/npm/docsify@4.11.6/lib/themes/vue.css', function (res) {
+        get('https://cdn.jsdelivr.net/npm/docsify@4.12.1/lib/themes/vue.css', function (res) {
             var ele = document.createElement("STYLE");
             ele.innerHTML = "*" + res.split(';*')[1];
             document.getElementsByTagName("HEAD")[0].appendChild(ele);
         })
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4.11.6/lib/docsify.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4.11.6/lib/plugins/search.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4.12.1/lib/docsify.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4.12.1/lib/plugins/search.min.js" defer></script>
 </body>
 </html>
