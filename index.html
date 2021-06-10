@@ -32,7 +32,7 @@
             repo: 'netnr',
             noEmoji: true,
             auto2top: true,
-            loadSidebar: true,
+            loadSidebar: false,
             relativePath: true,
             routerMode: location.hostname == "localhost" ? "hash" : "history",
             markdown: {
@@ -42,7 +42,7 @@
                         ch.push("<pre><code>");
                         try {
                             str = hljs.getLanguage(lang)
-                                ? hljs.highlight(lang, str).value
+                                ? hljs.highlight(str, { language: lang }).value
                                 : hljs.highlightAuto(str).value;
                             ch.push(str);
                         } catch (__) {
@@ -59,8 +59,8 @@
     <script>
         const nd = {
             sourceList: [
-                "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.6.0/build/styles/vs.min.css",
-                "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.6.0/build/highlight.min.js",
+                "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/vs.min.css",
+                "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js",
                 "https://cdn.jsdelivr.net/npm/docsify@4.12.1/lib/themes/vue.css",
                 "https://cdn.jsdelivr.net/npm/docsify@4.12.1/lib/docsify.min.js"
             ],

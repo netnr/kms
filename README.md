@@ -51,6 +51,12 @@ Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6
 Windows Server Standard | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4
 
 #### Windows Server LTSC/LTSB 版本
+##### Windows Server 2022
+操作系统版本 | KMS 客户端安装程序密钥
+---- | ----
+Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33
+Windows Server 2022 Standard | VDYBN-27WPP-V4HQT-9VMD4-VMK7H
+
 ##### Windows Server 2019
 操作系统版本 | KMS 客户端安装密钥
 ---- | ----
