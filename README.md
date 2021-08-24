@@ -17,7 +17,7 @@ KMS激活服务，slmgr命令激活Windows系统、Office
 ### 安装服务（Linux）
 ```
 # 一键安装脚本
-wget --no-check-certificate https://github.com/teddysun/across/raw/master/kms.sh && chmod +x kms.sh && ./kms.sh
+wget --no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/kms.sh && chmod +x kms.sh && ./kms.sh
 
 netstat -nxtlp | grep 1688 # 查看端口
 /etc/init.d/kms status # 状态
@@ -207,4 +207,3 @@ Windows 7 企业版 E | C29WB-22CC8-VJ326-GHFJW-H9DH4
 
 ### Source
 - <https://github.com/netnr/kms>
-- <https://gitee.com/netnr/kms>
