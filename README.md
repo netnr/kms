@@ -219,9 +219,7 @@ Windows 7 企业版 E | C29WB-22CC8-VJ326-GHFJW-H9DH4
 3. 激活 Office `cscript ospp.vbs/act`
 
 ### Office 密钥列表
-- Office 2019 & Office 2016 <https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks>
-- Office 2013 <https://technet.microsoft.com/zh-cn/library/dn385360.aspx>
-- Office 2010 <https://technet.microsoft.com/zh-cn/library/ee624355 (v=office.14).aspx>
+- <https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks>
 
 ### Help
 - <https://teddysun.com/530.html>

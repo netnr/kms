@@ -12,6 +12,10 @@
     <meta name="description" content="kms,netnr,NET牛人" />
 
     <style>
+        .sidebar ul li.active > a {
+            font-weight: 400 !important;
+        }
+
         .sidebar ul li p.active > a {
             border-right: 2px solid;
             font-weight: 600;
@@ -21,11 +25,6 @@
 </head>
 <body>
     <div id="app">Loading ...</div>
-
-    <!--SEO-->
-    <div style="display:none">
-        {SEO}
-    </div>
 
     <script>
         window.$docsify = {
@@ -59,10 +58,10 @@
     <script>
         const nd = {
             sourceList: [
-                "https://npm.elemecdn.com/@highlightjs/cdn-assets@11.2.0/styles/vs.min.css",
-                "https://npm.elemecdn.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js",
                 "https://npm.elemecdn.com/docsify@4.12.1/lib/themes/vue.css",
-                "https://npm.elemecdn.com/docsify@4.12.1/lib/docsify.min.js"
+                "https://npm.elemecdn.com/docsify@4.12.1/lib/docsify.min.js",
+                "https://npm.elemecdn.com/@highlightjs/cdn-assets@11.3.1/styles/vs.min.css",
+                "https://npm.elemecdn.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"
             ],
             createNode: function (nn, html) {
                 let em = document.createElement(nn);
@@ -79,10 +78,14 @@
 
                     var head = document.getElementsByTagName("HEAD")[0];
 
-                    head.appendChild(nd.createNode("STYLE", res[0]));
-                    head.appendChild(nd.createNode("SCRIPT", res[1]));
-                    head.appendChild(nd.createNode("STYLE", "*" + res[2].split(';*')[1]));
-                    head.appendChild(nd.createNode("SCRIPT", res[3]));
+                    for (let i = 0; i < res.length; i++) {
+                        let suri = nd.sourceList[i];
+                        let text = res[i];
+                        if (text.includes("fonts.googleapis.com")) {
+                            text = "*" + text.split(';*')[1];
+                        }
+                        head.appendChild(nd.createNode(suri.endsWith('.js') ? "SCRIPT" : "STYLE", text));
+                    }
                 })
             }
         }
