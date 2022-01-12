@@ -8,11 +8,13 @@ KMS 激活服务，slmgr 命令激活 Windows 系统、Office
 
 ### 可用服务
 - `kms.cangshui.net`
-- `skms.netnr.eu.org` 推荐使用，维护 **CNAME** 指向有效的服务
+- `skms.netnr.eu.org` 维护 **CNAME** 指向有效的服务
 + `telnet skms.netnr.eu.org 1688` 测试服务是否可用
 
-### 安装服务（Windows）
-- [vlmcs-Windows](https://s1.netnr.eu.org/static/app/vlmcs-Windows.zip)
+### 安装服务
+- ref: <https://github.com/Wind4/vlmcsd/releases>
+- Windows：[vlmcs-Windows](https://s1.netnr.eu.org/static/app/vlmcs-Windows.zip)
+
 
 ### 安装服务（Linux）
 ```
@@ -29,8 +31,9 @@ netstat -nxtlp | grep 1688 # 查看端口
 <https://teddysun.com/530.html>
 
 ### 密钥 
-<https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys>  
-<https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/get-started/kms-client-activation-keys.md>
+<https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys>
+
+[markdown](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/get-started/kms-client-activation-keys.md)
 
 ### Windows Server（LTSC 版本）
 
