@@ -218,8 +218,8 @@ Windows 7 企业版 E | C29WB-22CC8-VJ326-GHFJW-H9DH4
     - **Office15** 是 **Office 2013**
     - **Office14** 是 **Office 2010**
     - 打开以上所说的目录，应该有个 `OSPP.VBS` 文件
-2. 注册 KMS 服务 `cscript ospp.vbs/sethst:skms.netnr.eu.org`
-3. 激活 Office `cscript ospp.vbs/act`
+2. 注册 KMS 服务 `cscript ospp.vbs /sethst:skms.netnr.eu.org`
+3. 激活 Office `cscript ospp.vbs /act`
 
 ### Office 密钥列表
 - <https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks>
