@@ -1,29 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="KMS,netnr,NET牛人" />
+    <meta name="description" content="KMS,netnr,NET牛人">
 
     <title>KMS</title>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-    <meta name="keywords" content="kms,netnr,NET牛人" />
-    <meta name="description" content="kms,netnr,NET牛人" />
-
-    <style>
-        .sidebar ul li.active > a {
-            font-weight: 400 !important;
-        }
-
-        .sidebar ul li p.active > a {
-            border-right: 2px solid;
-            font-weight: 600;
-            color: #42b983;
-        }
-    </style>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
 </head>
+
 <body>
+
+    <link rel="stylesheet" href="https://zme.ink/static/docsify-better/docsify-better.css?1" />
+
+    <script>
+        var dinit = {
+            readTheme: () => {
+                var themeClass = 'auto';
+                if (document.cookie.includes(".theme=light")) {
+                    themeClass = 'light';
+                } else if (document.cookie.includes(".theme=dark")) {
+                    themeClass = 'dark';
+                }
+
+                dinit.setTheme(themeClass);
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                    if (dinit.cookie(".theme") == 'auto') {
+                        dinit.setTheme('auto');
+                    }
+                });
+            },
+            isPrefersDark: () => window.matchMedia('(prefers-color-scheme: dark)').matches,
+            setTheme: (theme) => {
+                dinit.cookie('.theme', theme);
+
+                if (theme == "auto") {
+                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+                }
+                document.documentElement.className = `sl-theme-${theme} netnrmd-${theme}`;
+            },
+            cookie: function (name, value) {
+                if (arguments.length == 2) {
+                    document.cookie = `${name}=${value};path=/`;
+                } else {
+                    let arr = `; ${document.cookie}`.split(`; ${name}=`);
+                    if (arr.length === 2) return arr.pop().split(';').shift();
+                }
+            },
+            toggleTheme: (theme) => {
+                if (theme == null) {
+                    var themes = ["light", "dark", "auto"];
+                    var ti = themes.indexOf(dinit.cookie(".theme")) + 1;
+                    if (ti >= themes.length) {
+                        ti = 0;
+                    }
+                    theme = themes[ti];
+                }
+
+                dinit.setTheme(theme);
+            }
+        }
+
+        dinit.readTheme();
+    </script>
+
+    <!--Menu-->
+    <nav class="app-nav">
+        <ul>
+            <li>
+                <a class="nr-toggle-theme" title="Theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .625.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .509-.375A3.502 3.502 0 0 1 7 8zm4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5h-.027z" />
+                        <path
+                            d="M11.286 1.778a.5.5 0 0 0-.565-.755 4.595 4.595 0 0 0-3.18 5.003 5.46 5.46 0 0 1 1.055.209A3.603 3.603 0 0 1 9.83 2.617a4.593 4.593 0 0 0 4.31 5.744 3.576 3.576 0 0 1-2.241.634c.162.317.295.652.394 1a4.59 4.59 0 0 0 3.624-2.04.5.5 0 0 0-.565-.755 3.593 3.593 0 0 1-4.065-5.422z" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <div id="app">Loading ...</div>
 
     <script>
@@ -31,18 +90,19 @@
             repo: 'netnr',
             noEmoji: true,
             auto2top: true,
-            loadSidebar: false,
             relativePath: true,
-            routerMode: location.hostname == "localhost" ? "hash" : "history",
+            routerMode: "history",
             markdown: {
                 renderer: {
                     code: function (str, lang) {
-                        let ch = [];
-                        ch.push("<pre><code>");
+                        var ch = [];
+                        ch.push('<pre><code>');
                         try {
-                            str = hljs.getLanguage(lang)
-                                ? hljs.highlight(str, { language: lang }).value
-                                : hljs.highlightAuto(str).value;
+                            str = hljs.getLanguage(lang) ?
+                                hljs.highlight(str, {
+                                    language: lang
+                                }).value :
+                                hljs.highlightAuto(str).value;
                             ch.push(str);
                         } catch (__) {
                             ch.push(str);
@@ -51,48 +111,30 @@
                         return ch.join('');
                     }
                 }
-            }
-        };
-    </script>
-
-    <script>
-        const nd = {
-            sourceList: [
-                "https://npm.elemecdn.com/docsify-darklight-theme@3.2.0/dist/style.min.css",
-                "https://npm.elemecdn.com/docsify@4.12.2/lib/docsify.min.js",
-                "https://npm.elemecdn.com/@highlightjs/cdn-assets@11.5.1/styles/vs2015.min.css",
-                "https://npm.elemecdn.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js",
-                "https://npm.elemecdn.com/docsify-darklight-theme@3.2.0/dist/index.min.js"
-            ],
-            createNode: function (nn, html) {
-                let em = document.createElement(nn);
-                em.innerHTML = html;
-                return em;
             },
-            init: function () {
-                let pas = [];
-                nd.sourceList.forEach(u => {
-                    pas.push(fetch(u).then(x => x.text()));
-                });
+            plugins: [
+                function (hook) {
+                    // 每次开始解析 Markdown 内容时调用
+                    hook.beforeEach(function (content) {
+                        var domMain = document.getElementById("main");
+                        domMain.classList.add("markdown-body");
 
-                Promise.all(pas).then(res => {
+                        return content;
+                    });
+                }
+            ]
+        };
 
-                    var head = document.getElementsByTagName("HEAD")[0];
-
-                    for (let i = 0; i < res.length; i++) {
-                        let suri = nd.sourceList[i];
-                        let text = res[i];
-                        if (text.includes("fonts.googleapis.com")) {
-                            text = "*" + text.split(';*')[1];
-                        }
-                        text = text.replaceAll("cdn.jsdelivr.net/npm/", "npm.elemecdn.com/");
-                        head.appendChild(nd.createNode(suri.endsWith('.js') ? "SCRIPT" : "STYLE", text));
-                    }
-                })
-            }
-        }
-
-        nd.init();
+        var domToggleTheme = document.querySelector(".nr-toggle-theme");
+        domToggleTheme.title = `Theme: ${dinit.cookie(".theme")}`;
+        domToggleTheme.addEventListener('click', function (e) {
+            dinit.toggleTheme(); //切换主题
+            this.title = `Theme: ${dinit.cookie(".theme")}`;
+            e.stopPropagation();
+        })
     </script>
+
+    <script src="https://zme.ink/static/docsify-better/docsify-better.js?1"></script>
 </body>
+
 </html>
