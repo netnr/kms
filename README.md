@@ -14,7 +14,7 @@ KMS 激活服务，slmgr 命令激活 Windows 系统、Office
 
 ### 安装服务
 - ref: <https://github.com/Wind4/vlmcsd/releases>
-- Windows：[vlmcs-Windows](https://s1.netnr.eu.org/static/app/vlmcs-Windows.zip)
+- Windows：[vlmcs-Windows](https://gs.zme.ink/static/app/vlmcs-Windows.zip)
 
 
 ### 安装服务（Linux）
@@ -32,9 +32,9 @@ netstat -nxtlp | grep 1688 # 查看端口
 <https://teddysun.com/530.html>
 
 ### 密钥 
-<https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys>
+<https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys>
 
-[kms-client-activation-keys.md](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/get-started/kms-client-activation-keys.md)
+[kms-client-activation-keys.md](https://github.com/MicrosoftDocs/windowsserverdocs/blob/main/WindowsServerDocs/get-started/kms-client-activation-keys.md)
 
 ### Windows Server（LTSC 版本）
 
