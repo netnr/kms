@@ -1,15 +1,16 @@
 /**
  * Author: netnr
  * Date: 2022-10
- * 
- * deno run --allow-net --allow-read --watch app.ts
+ *
+ * deno run --allow-net --allow-read --watch deno.ts
  */
 
-import { serve } from "https://deno.land/std/http/mod.ts";
-import { lookup } from "https://deno.land/x/media_types/mod.ts";
+import { serve } from "https://deno.land/std@0.160.0/http/server.ts";
+import { lookup } from "https://deno.land/x/media_types@v2.13.0/mod.ts";
 
-const reqHandler = async (req: Request) => {
+serve(handler, { port: 713 });
 
+async function handler(req: Request): Promise<Response> {
   let filePath = "." + new URL(req.url).pathname;
   if (filePath.endsWith("/")) {
     filePath += "index.html";
@@ -52,6 +53,4 @@ const reqHandler = async (req: Request) => {
       "access-control-allow-origin": "*",
     },
   });
-};
-
-serve(reqHandler, { port: 713 });
+}
