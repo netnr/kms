@@ -7,15 +7,14 @@ KMS 激活服务，slmgr 命令激活 Windows 系统、Office
 3. 激活系统 `slmgr -ato`
 
 ### 可用服务
-- `kms.cangshui.net`
-- `kms.03k.org`
 - `skms.netnr.eu.org` 维护 **CNAME** 指向有效的服务
+
 + `telnet skms.netnr.eu.org 1688` 测试服务是否可用
++ `tcping skms.netnr.eu.org 1688`
 
 ### 安装服务
 - ref: <https://github.com/Wind4/vlmcsd/releases>
 - Windows：[vlmcs-Windows](https://gs.zme.ink/static/app/vlmcs-Windows.zip)
-
 
 ### 安装服务（Linux）
 ```
@@ -43,6 +42,7 @@ netstat -nxtlp | grep 1688 # 查看端口
 操作系统版本 | KMS 客户端安装密钥
 --- | ---
 Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33
+Windows Server 2022 Datacenter Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV
 Windows Server 2022 Standard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H
 
 #### Windows Server 2019
@@ -227,8 +227,5 @@ Windows 7 企业版 E | C29WB-22CC8-VJ326-GHFJW-H9DH4
 
 ### Help
 - <https://teddysun.com/530.html>
-- <https://03k.org/kms.html>
 - <http://kms.cangshui.net>
-
-### Source
-- <https://github.com/netnr/kms>
+- <https://blog.03k.org/post/kms.html>
