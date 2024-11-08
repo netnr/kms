@@ -41,32 +41,32 @@ netstat -nxtlp | grep 1688 # 查看端口
 
 操作系统版本 | KMS 客户端安装密钥
 --- | ---
-Windows Server 2025 Standard | TVRH6-WHNXV-R9WG3-9XRFY-MY832
+Windows Server 2025 Standard   | TVRH6-WHNXV-R9WG3-9XRFY-MY832
 Windows Server 2025 Datacenter | D764K-2NDRG-47T6Q-P8T8W-YP6DF
-Windows Server 2025 Azure Edition | XGN3F-F394H-FD2MY-PP6FD-8MCRC
+Windows Server 2025 Datacenter: Azure Edition | XGN3F-F394H-FD2MY-PP6FD-8MCRC
 
 #### Windows Server 2022
 
 操作系统版本 | KMS 客户端安装密钥
 --- | ---
-Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33
-Windows Server 2022 Datacenter Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV
 Windows Server 2022 Standard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H
+Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33
+Windows Server 2022 Datacenter: Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV
 
 #### Windows Server 2019
 
 操作系统版本 | KMS 客户端安装密钥
 --- | ---
-Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG
 Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C
+Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG
 Windows Server 2019 Essentials | WVDHN-86M7X-466P6-VHXV7-YY726
 
 #### Windows Server 2016
 
 操作系统版本 | KMS 客户端安装密钥
 --- | ---
-Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG
 Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY
+Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG
 Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B
 
 ### Windows Server (半年频道版本)
@@ -75,8 +75,8 @@ Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B
 
 操作系统版本 | KMS 客户端安装密钥
 --- | ---
-Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D
 Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC
+Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D
 
 ### Windows 11 和 Windows 10 (半年频道版本)
 
@@ -124,23 +124,23 @@ Windows 10 企业版 2015 LTSB N | 2F77B-TNFGY-69QQF-B8YKP-D69TJ
 
 操作系统版本 | KMS 客户端安装密钥
 --- | ---
-Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG
 Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR
+Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG
 
 #### Windows Server 版本 1709
 
 操作系统版本 | KMS 客户端安装密钥
 --- | ---
-Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6
 Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4
+Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6
 
 #### Windows Server 2012 R2
 
 操作系统版本 | KMS 客户端安装密钥
 --- | ---
-Windows Server 2012 R2 Server Standard | D2N9P-3P6X9-2R39C-7RTCD-MDVJX
-WindowsServer 2012 R2 Datacenter | W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9
-WindowsServer 2012 R2 Essentials | KNC87-3J2TX-XB4WP-VCPJV-M4FWM
+Windows Server 2012 R2 Standard   | D2N9P-3P6X9-2R39C-7RTCD-MDVJX
+Windows Server 2012 R2 Datacenter | W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9
+Windows Server 2012 R2 Essentials | KNC87-3J2TX-XB4WP-VCPJV-M4FWM
 
 #### Windows Server 2012
 

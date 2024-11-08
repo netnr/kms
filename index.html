@@ -5,38 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="KMS,netnr,NET牛人" />
     <meta name="description" content="KMS,netnr,NET牛人">
-
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
     <title>KMS</title>
 
-    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
-</head>
-
-<body style="margin:0;padding:0;">
-    <!--主题响应-->
+    <style id="style0">
+        body::after {
+            position: fixed;
+            top: 2vh;
+            left: 1vw;
+            opacity: .8;
+            content: "loading";
+        }
+    </style>
     <script>
         if (document.cookie.includes(".theme=dark")) {
-            Object.assign(document.body.style, { backgroundColor: '#212529', color: '#adb5bd' });
+            document.getElementById("style0").innerHTML += "body { color: #d4d4d4; background-color: #0d1117 }";
+
             let domHtml = document.documentElement;
             domHtml.dataset.bsTheme = "dark";
             domHtml.className = domHtml.className.replace('light', 'dark');
         }
     </script>
+</head>
 
-    <!--Menu-->
+<body>
+
+    <!--menu-->
     <nav class="app-nav" style="display:none;">
-        <ul><li><a class="flag-theme" title="Theme"></a></li></ul>
+        <ul>
+            <li><a class="flag-theme" title="Theme"></a></li>
+        </ul>
     </nav>
 
-    <!--Main-->
-    <div id="app" style="margin:1em;font-size:1.2em;opacity:.8;">Loading ...</div>
+    <!--main-->
+    <div id="app"></div>
 
-    <link rel="stylesheet" href="https://zme.ink/static/docsify-better/docsify-better.css?2023" />
+    <link rel="stylesheet" href="https://zme.ink/static/docsify-better/docsify-better.css?202411" />
 
     <script>
         window.$docsify = {
-            repo: 'netnr',
+            repo: "netnr",
             noEmoji: true,
             auto2top: true,
+            subMaxLevel: 3,
             relativePath: true,
             routerMode: "history",
             markdown: {
@@ -53,17 +64,17 @@
                 function (hook) {
                     // 每次开始解析 Markdown 内容时调用
                     hook.beforeEach(function (content) {
-                        var domMain = document.getElementById("main");
+                        let domMain = document.getElementById("main");
                         domMain.classList.add("markdown-body");
 
                         return content;
                     });
                 }
             ]
-        };
+        }
     </script>
 
-    <script src="https://zme.ink/static/docsify-better/docsify-better.js?1.0.2"></script>
+    <script src="https://zme.ink/static/docsify-better/docsify-better.js?202411"></script>
 </body>
 
 </html>
