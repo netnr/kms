@@ -233,7 +233,8 @@ Windows 7 企业版 E | C29WB-22CC8-VJ326-GHFJW-H9DH4
 ### Office 密钥列表
 - <https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks>
 
-### Help
+### More
+- <https://kms.cangshui.net>
 - <https://teddysun.com/530.html>
-- <http://kms.cangshui.net>
 - <https://blog.03k.org/post/kms.html>
+- <https://github.com/massgravel/Microsoft-Activation-Scripts>
