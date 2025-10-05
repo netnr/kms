@@ -12,23 +12,9 @@ KMS 激活服务，slmgr 命令激活 Windows 系统、Office
 + `telnet skms.netnr.eu.org 1688` 测试服务是否可用
 + `tcping skms.netnr.eu.org 1688`
 
-### 安装服务
-- ref: <https://github.com/Wind4/vlmcsd/releases>
-- Windows：[vlmcs-Windows](https://gs.zme.ink/static/app/vlmcs-Windows.zip)
-
-### 安装服务（Linux）
-```
-# 一键安装脚本
-wget --no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/kms.sh && chmod +x kms.sh && ./kms.sh
-
-netstat -nxtlp | grep 1688 # 查看端口
-/etc/init.d/kms status # 状态
-/etc/init.d/kms start # 启动
-/etc/init.d/kms stop # 停止
-/etc/init.d/kms restart # 重启
-./kms.sh uninstall # 卸载
-```
-<https://teddysun.com/530.html>
+### 安装
+- Ref: <https://github.com/Wind4/vlmcsd/releases>
+- Portable: <https://github.com/kkkgo/vlmcsd/releases> (便携版 推荐)
 
 ### 密钥 
 <https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys>
