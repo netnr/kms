@@ -1,6 +1,6 @@
 {
   "name": "kms",
-  "compatibility_date": "2025-08-17",
+  "compatibility_date": "2026-03-27",
   "assets": {
     "directory": "./",
     "not_found_handling": "single-page-application"
